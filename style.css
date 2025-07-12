@@ -20,14 +20,24 @@ header {
     width: 100%;
     height: 80px;
     position: fixed;
-    max-width: 800px;
+    max-width: 1300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
     z-index: 1;
 }
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
 
+.img-header {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
 .logo {
     animation: showUp 0.7s forwards;
     animation-delay: 0.3s;
@@ -83,7 +93,7 @@ main {
     /* background: green; */
     background: white;
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     padding: 0 50px;
     padding-top: 80px;
     display: flex;
@@ -147,25 +157,50 @@ main::before {
     cursor: pointer;
 }
 
-.list-button .download-cv {
-    border: none;
+.download-cv {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 13.3333px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
     background: #00CBD4;
     color: white;
-    box-shadow: 4px 4px 10px #00CBD4;
+    border: none;
+    transition: background 0.3s ease;
+    
     animation: showUp 0.7s forwards;
     animation-delay: 1.6s;
     opacity: 0;
     transform: translateY(20px);
 }
 
-.list-button .contact-me {
-    background: white;
-    border: solid 2px #00CBD4;
+.download-cv:hover {
+    background: #009fa5;
+    box-shadow: 0 12px 24px rgba(0, 203, 212, 0.25);
+}
+
+.contact-me {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 13.3333px;
+    border-radius:25px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #00CBD4;
+    color: #00CBD4;
+    transition: background 0.3s ease;
 
     animation: showUp 0.7s forwards;
     animation-delay: 1.8s;
     opacity: 0;
     transform: translateY(20px);
+}
+
+.contact-me:hover {
+    background: #00CBD4;
+    color: white;
+    box-shadow: 0 12px 24px rgba(0, 203, 212, 0.25);
 }
 
 .right {
@@ -181,8 +216,10 @@ main::before {
 }
 
 .me-img {
-    width: 400px;
-    height: 400px;
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 400px;
+    max-height: 400px;
     position: absolute;
     left: 0;
 
@@ -201,7 +238,7 @@ main::before {
     color: #333;
 }
 .section {
-    max-width: 800px;
+    max-width: 1300px;
     padding: 80px 50px 40px;
     width: 100%;
     background: white;
@@ -423,7 +460,7 @@ footer {
     background: #101828;
     width: 100%;
     min-height: 10dvh;
-    max-width: Auto;
+    max-width: auto;
     padding: 0 50px;
     display: flex;
     align-items: center;
@@ -434,7 +471,7 @@ footer {
 }
 footer .section {
     
-    max-width: 800px;
+    max-width: 1300px;
     padding: 80px 50px 40px;
     width: 100%;
     background: #101828;
@@ -453,7 +490,7 @@ footer .section p {
 }
 footer a {
     color: #ffffff;
-
+    text-decoration: none;
     animation: showUp 0.7s forwards;
     opacity: 0;
     transform: translateY(20px);
